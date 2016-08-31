@@ -1,0 +1,23 @@
+{
+  "name": "obj-get",
+  "version": "0.0.1",
+  "description": "Safely get nested properties on an object",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": "6.x.x"
+  },
+  "keywords": [
+    "object",
+    "property",
+    "get",
+    "access",
+    "safe",
+    "nest",
+    "nested"
+  ],
+  "author": "Phillip Gibson <gibson.phillip.j@gmail.com>",
+  "license": "MIT"
+}
