@@ -1,8 +1,21 @@
 const assert = require('assert')
 const get = require('./index.js')
 
-assert.equal(get({a:1}, 'a'), 1, 'single prop access')
+const obj = {
+  single: 1,
+  nested: {
+    node: {
+      exists: 'abc'
+    }
+  }
+}
 
-assert.equal(get({a:{b:1}}, 'a.b'), 1, 'nested dot prop access')
-
-assert.equal(get({a:{b:1}}, 'a', 'b'), 1, 'nested arg prop access')
+assert.equal(get(obj, 'single'), 1)
+assert.equal(get(obj, 'nested.node.exists'), 'abc')
+assert.equal(get(obj, 'nested.node', 'exists'), 'abc')
+assert.equal(get(obj, 'nested', 'node.exists'), 'abc')
+assert.equal(get(obj, 'nested', 'node', 'exists'), 'abc')
+assert.equal(get(obj, 'fake'), undefined)
+assert.equal(get(obj, 'single.fake'), undefined)
+assert.equal(get(obj, 'nested.fake'), undefined)
+assert.equal(get(obj, 'nested.node.fake.morefake'), undefined)
