@@ -1,4 +1,4 @@
-# get-obj
+# obj-get
 Safely get nested properties on an object
 
 ### Installation
