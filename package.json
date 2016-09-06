@@ -7,7 +7,7 @@
     "test": "node test.js"
   },
   "engines": {
-    "node": "6.x.x"
+    "node": ">=0.10.0"
   },
   "keywords": [
     "object",
