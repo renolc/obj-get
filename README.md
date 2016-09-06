@@ -8,11 +8,18 @@ Safely get nested properties on an object
 ### Usage
 
 ```javascript
-const get = require('obj-get')
+const assert = require('assert')
+const get = require('./index.js')
 
 const obj = {
   single: 1,
   nested: {
+    array: [
+      'first',
+      {
+        name: 'second'
+      }
+    ],
     node: {
       exists: 'abc'
     }
