@@ -1,4 +1,4 @@
-# obj-get
+# obj-get [![npm version](https://badge.fury.io/js/obj-get.svg)](https://badge.fury.io/js/obj-get)
 Safely get nested properties on an object. Compatible with Node 0.10.0+ and browsers as far back as IE9.
 
 ### Installation
